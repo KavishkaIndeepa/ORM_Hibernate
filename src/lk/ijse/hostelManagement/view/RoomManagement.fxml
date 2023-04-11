@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="RoomPane" prefHeight="623.0" prefWidth="987.0" style="-fx-background-color: linear-gradient(to right, #bbd2c5, #536976);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagement.controller.RoomManagementController">
+   <children>
+      <JFXTextField fx:id="txtRoomId" layoutX="77.0" layoutY="158.0" prefHeight="31.0" prefWidth="286.0" promptText="Room ID :" unFocusColor="#fffbfb">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtRoomType" layoutX="622.0" layoutY="158.0" prefHeight="31.0" prefWidth="286.0" promptText="Room Type :" unFocusColor="#f2eaea">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtKeyMoney" layoutX="77.0" layoutY="232.0" prefHeight="31.0" prefWidth="286.0" promptText="Key Money :" unFocusColor="#f2f2f2">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtQty" layoutX="622.0" layoutY="232.0" prefHeight="31.0" prefWidth="286.0" promptText="Qty :" unFocusColor="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <TableView fx:id="tblRoom" layoutX="69.0" layoutY="333.0" prefHeight="250.0" prefWidth="714.0">
+        <columns>
+          <TableColumn fx:id="colRoomId" prefWidth="191.0" text="Room ID" />
+          <TableColumn fx:id="colRoomType" prefWidth="218.0" text="Room Type" />
+            <TableColumn fx:id="colKeyMoney" prefWidth="201.0" text="Key Money" />
+            <TableColumn fx:id="colQty" prefWidth="103.0" text="Qty" />
+            <TableColumn fx:id="colKeyMoney1" prefWidth="201.0" text="Key Money" />
+        </columns>
+      </TableView>
+      <JFXTextField fx:id="txtSearch" layoutX="622.0" layoutY="99.0" onMouseClicked="#searchOnAction" prefHeight="31.0" prefWidth="286.0" promptText="Search :" unFocusColor="#eeebeb">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton layoutX="835.0" layoutY="363.0" onAction="#addOnAction" prefHeight="31.0" prefWidth="126.0" style="-fx-background-color: #4cd137;" text="ADD" textFill="#fffafa">
+         <font>
+            <Font name="Rockwell Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="835.0" layoutY="421.0" onAction="#saveOnAction" prefHeight="31.0" prefWidth="126.0" style="-fx-background-color: #0652DD;" text="SAVE" textFill="#f2eded">
+         <font>
+            <Font name="Rockwell Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="835.0" layoutY="480.0" onAction="#deleteOnAction" prefHeight="31.0" prefWidth="126.0" style="-fx-background-color: #EA2027;" text="DELETE" textFill="#f5f0f0">
+         <font>
+            <Font name="Rockwell Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="835.0" layoutY="549.0" onAction="#backOnAction" prefHeight="31.0" prefWidth="126.0" style="-fx-background-color: #4b4b4b;" text="BACK" textFill="#f8f7f7">
+         <font>
+            <Font name="Modern No. 20" size="19.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="311.0" layoutY="30.0" prefHeight="41.0" prefWidth="286.0" text="Manage Rooms" textFill="#370fff">
+         <font>
+            <Font name="Lucida Bright Demibold" size="34.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

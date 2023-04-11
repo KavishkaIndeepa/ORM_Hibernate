@@ -9,7 +9,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
-public class StudentManagmentController {
+public class StudentManagementController {
     public AnchorPane StudentPane;
     public JFXTextField txtId;
     public JFXTextField txtName;
