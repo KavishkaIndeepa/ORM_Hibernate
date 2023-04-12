@@ -11,10 +11,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagement.controller.LoginController">
+<AnchorPane prefHeight="623.0" prefWidth="987.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagement.controller.LoginController">
    <children>
-      <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true">
+      <ImageView fitHeight="623.0" fitWidth="987.0" pickOnBounds="true">
          <image>
             <Image url="@assest/hostel2.jpg" />
          </image>
@@ -22,35 +21,35 @@
             <Blend mode="DARKEN" />
          </effect>
       </ImageView>
-      <JFXTextField fx:id="txtName" labelFloat="true" layoutX="306.0" layoutY="222.0" prefHeight="29.0" prefWidth="206.0" promptText="Name" unFocusColor="#171717">
+      <JFXTextField fx:id="txtName" labelFloat="true" layoutX="472.0" layoutY="334.0" prefHeight="42.0" prefWidth="354.0" promptText="Name" unFocusColor="#171717">
          <font>
-            <Font name="System Bold" size="13.0" />
+            <Font name="System Bold" size="19.0" />
          </font>
          <effect>
             <ColorAdjust brightness="-0.71" />
          </effect>
       </JFXTextField>
-      <JFXPasswordField fx:id="txtPassword" labelFloat="true" layoutX="306.0" layoutY="284.0" prefHeight="29.0" prefWidth="206.0" promptText="Password" unFocusColor="#252323">
+      <JFXPasswordField fx:id="txtPassword" labelFloat="true" layoutX="473.0" layoutY="447.0" prefHeight="42.0" prefWidth="354.0" promptText="Password" unFocusColor="#252323">
          <font>
-            <Font name="System Bold" size="13.0" />
+            <Font name="System Bold" size="19.0" />
          </font>
          <effect>
             <ColorAdjust brightness="-1.0" />
          </effect>
       </JFXPasswordField>
-      <JFXButton layoutX="355.0" layoutY="329.0" onAction="#loginOnAction" text="Login" textFill="#1b1a1a">
+      <JFXButton layoutX="548.0" layoutY="556.0" onAction="#loginOnAction" text="Login" textFill="#1b1a1a">
          <font>
-            <Font name="System Bold" size="15.0" />
+            <Font name="System Bold" size="20.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="438.0" layoutY="329.0" onAction="#cancelOnAction" text="Cancel" textFill="#070606">
+      <JFXButton layoutX="699.0" layoutY="556.0" onAction="#cancelOnAction" text="Cancel" textFill="#070606">
          <font>
-            <Font name="System Bold" size="15.0" />
+            <Font name="System Bold" size="20.0" />
          </font>
       </JFXButton>
-      <Label fx:id="lblHide" layoutX="505.0" layoutY="286.0" onMousePressed="#showPasswordOnMousePressed" onMouseReleased="#hidePasswordOnMousePressed" prefHeight="25.0" prefWidth="30.0" text=" ">
+      <Label fx:id="lblHide" layoutX="766.0" layoutY="450.0" onMousePressed="#showPasswordOnMousePressed" onMouseReleased="#hidePasswordOnMousePressed" prefHeight="31.0" prefWidth="44.0" text=" ">
          <graphic>
-            <ImageView fitHeight="13.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="20.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" smooth="false">
                <image>
                   <Image url="@assest/password%20hide.png" />
                </image>

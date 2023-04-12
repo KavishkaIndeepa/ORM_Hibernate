@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane fx:id="UserPane" prefHeight="623.0" prefWidth="987.0" style="-fx-background-color: linear-gradient(to right, #bbd2c5, #536976);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagement.controller.ManageUserController">
+   <children>
+      <Text fill="#370fff" layoutX="384.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manage User">
+         <font>
+            <Font name="Lucida Bright Demibold" size="34.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="txtUserId" layoutX="106.0" layoutY="170.0" promptText="User Id" unFocusColor="#f2ebeb">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtUserName" layoutX="384.0" layoutY="170.0" promptText="User Name" unFocusColor="#f2ebeb">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtUserAddress" layoutX="675.0" layoutY="170.0" promptText="User  Address" unFocusColor="#f2ebeb">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtContactNo" layoutX="106.0" layoutY="267.0" promptText="Contact Number" unFocusColor="#f2ebeb">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtPassword" layoutX="384.0" layoutY="267.0" promptText="Password" unFocusColor="#f2ebeb">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXComboBox fx:id="cmbGender" layoutX="675.0" layoutY="267.0" prefHeight="31.0" prefWidth="169.0" promptText="Gender" unFocusColor="#e8e4e4" />
+      <TableView fx:id="tblUser" layoutX="21.0" layoutY="363.0" prefHeight="200.0" prefWidth="781.0">
+        <columns>
+          <TableColumn fx:id="colUserId" prefWidth="131.0" text="User Id" />
+          <TableColumn fx:id="colUserName" prefWidth="136.0" text="User Name" />
+            <TableColumn fx:id="colAddress" prefWidth="136.0" text="User Address" />
+            <TableColumn fx:id="colContactNo" prefWidth="136.0" text="Contact NO" />
+            <TableColumn fx:id="colPassword" prefWidth="136.0" text="Password" />
+            <TableColumn fx:id="colGender" prefWidth="105.0" text="Gender" />
+        </columns>
+      </TableView>
+      <JFXButton layoutX="865.0" layoutY="363.0" onAction="#addOnAction" style="-fx-background-color: #4cd137;" text="ADD" textFill="#f5f3f3">
+         <font>
+            <Font name="Rockwell Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="862.0" layoutY="418.0" onAction="#saveOnAction" style="-fx-background-color: #0652DD;" text="SAVE" textFill="#f8f4f4">
+         <font>
+            <Font name="Rockwell Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="848.0" layoutY="475.0" onAction="#deleteOnAction" style="-fx-background-color: #EA2027;" text="DELETE" textFill="#f8f6f6">
+         <font>
+            <Font name="Rockwell Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="864.0" layoutY="547.0" onAction="#backOnAction" style="-fx-background-color: #4b4b4b;" text="BACK" textFill="#fcfafa">
+         <font>
+            <Font name="Modern No. 20" size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

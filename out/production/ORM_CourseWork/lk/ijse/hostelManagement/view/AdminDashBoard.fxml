@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="adminDashBoard" prefHeight="623.0" prefWidth="987.0" style="-fx-background-color: linear-gradient(to right, #bbd2c5, #536976);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagement.controller.AdminDashBoardController">
+   <children>
+      <Label layoutX="329.0" layoutY="46.0" text="Admin Dashboard" textFill="#370fff">
+         <font>
+            <Font name="Lucida Bright Demibold" size="34.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="780.0" layoutY="111.0" onAction="#manageUserOnAction" style="-fx-background-color: #4cd137;" text="Manage Usre" textFill="#f2efef">
+         <font>
+            <Font name="Rockwell Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="48.0" layoutY="546.0" onAction="#backOnAction" style="-fx-background-color: #4b4b4b;" text="Back" textFill="#f2efef">
+         <font>
+            <Font name="Rockwell Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <ImageView fx:id="imgReservation" fitHeight="150.0" fitWidth="200.0" layoutX="87.0" layoutY="225.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assest/reservation.jpg" />
+         </image>
+         <effect>
+            <ColorAdjust brightness="1.0" />
+         </effect>
+      </ImageView>
+      <ImageView fx:id="imgRoom" fitHeight="150.0" fitWidth="200.0" layoutX="370.0" layoutY="225.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assest/Room_Book.png" />
+         </image>
+         <effect>
+            <ColorAdjust brightness="1.0" />
+         </effect>
+      </ImageView>
+      <ImageView fx:id="imgKeyMoney" fitHeight="150.0" fitWidth="200.0" layoutX="693.0" layoutY="206.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assest/Key_Mney.png" />
+         </image>
+         <effect>
+            <ColorAdjust brightness="1.0" />
+         </effect>
+      </ImageView>
+      <Label fx:id="lblMenu" layoutX="276.0" layoutY="434.0" prefHeight="47.0" prefWidth="487.0" text="Welcome" textFill="#e00b0b">
+         <font>
+            <Font name="Lucida Bright Demibold" size="40.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDescription" layoutX="272.0" layoutY="481.0" prefHeight="47.0" prefWidth="398.0" text="Please select one of above main operations to proceed" textFill="#3912ff">
+         <font>
+            <Font name="Lucida Bright Demibold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

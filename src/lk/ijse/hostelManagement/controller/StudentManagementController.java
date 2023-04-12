@@ -6,6 +6,7 @@ import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
@@ -26,9 +27,7 @@ public class StudentManagementController {
     public TableColumn colGender;
     public JFXTextField txtSearch;
 
-    public void SearchOnAction(MouseEvent mouseEvent) {
-    }
-
+   
     public void AddOnAction(ActionEvent actionEvent) {
     }
 
@@ -42,4 +41,6 @@ public class StudentManagementController {
     }
 
 
+    public void SearchOnAction(KeyEvent keyEvent) {
+    }
 }

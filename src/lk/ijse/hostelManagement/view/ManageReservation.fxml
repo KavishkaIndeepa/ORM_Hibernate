@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane fx:id="ReservationPane" prefHeight="623.0" prefWidth="987.0" style="-fx-background-color: linear-gradient(to right, #bbd2c5, #536976);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagement.controller.ManageReservationController">
+   <children>
+      <Text fill="#370fff" layoutX="321.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manage Reservation">
+         <font>
+            <Font name="Lucida Bright Demibold" size="34.0" />
+         </font>
+      </Text>
+      <JFXComboBox fx:id="cmbStudentId" focusColor="#1109f2" layoutX="87.0" layoutY="190.0" prefHeight="31.0" prefWidth="180.0" promptText="Student Id" unFocusColor="WHITE" />
+      <JFXTextField fx:id="txtName" focusColor="#0e54e1" layoutX="370.0" layoutY="190.0" prefHeight="31.0" prefWidth="196.0" promptText="Name" unFocusColor="#f2ecec">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtContact" focusColor="#0e54e1" layoutX="688.0" layoutY="190.0" prefHeight="31.0" prefWidth="180.0" promptText="Contact" unFocusColor="#f2ecec">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtAddress" focusColor="#0e54e1" layoutX="87.0" layoutY="269.0" prefHeight="31.0" prefWidth="180.0" promptText="Address" unFocusColor="#f2ecec">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtDob" focusColor="#0e54e1" layoutX="370.0" layoutY="269.0" prefHeight="31.0" prefWidth="180.0" promptText="DOB" unFocusColor="#f2ecec">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtGender" focusColor="#0e54e1" layoutX="688.0" layoutY="269.0" prefHeight="31.0" prefWidth="180.0" promptText="Gender" unFocusColor="#f2ecec">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <Separator layoutY="345.0" prefHeight="0.0" prefWidth="987.0" style="-fx-background-color: Red;" />
+      <JFXComboBox fx:id="cmbRoomId" focusColor="#0f0ffc" layoutX="87.0" layoutY="400.0" prefHeight="31.0" prefWidth="180.0" promptText="Room Id" unFocusColor="#f2f2f2" />
+      <JFXTextField fx:id="txtRoomType" focusColor="#0e54e1" layoutX="362.0" layoutY="400.0" prefHeight="31.0" prefWidth="196.0" promptText="Room Type" unFocusColor="#f2ecec">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtKeyMoney" focusColor="#0e54e1" layoutX="720.0" layoutY="400.0" prefHeight="31.0" prefWidth="196.0" promptText="Key Money" unFocusColor="#f2ecec">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtQty" focusColor="#0e54e1" layoutX="87.0" layoutY="490.0" prefHeight="31.0" prefWidth="196.0" promptText="Qty" unFocusColor="#f2ecec">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtAdvance" focusColor="#0e54e1" layoutX="362.0" layoutY="490.0" prefHeight="31.0" prefWidth="196.0" promptText="Advance" unFocusColor="#f2ecec">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton layoutX="48.0" layoutY="553.0" onAction="#backOnAction" style="-fx-background-color: #4b4b4b;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="Modern No. 20" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="835.0" layoutY="553.0" onAction="#reserveOnAction" style="-fx-background-color: #0652DD;" text="Reserve" textFill="#f8f7f7">
+         <font>
+            <Font name="Rockwell Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="762.0" layoutY="114.0" onAction="#addStudentOnAction" style="-fx-background-color: #4cd137;" text="Add Student" textFill="#fcf9f9">
+         <font>
+            <Font name="Rockwell Bold" size="20.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

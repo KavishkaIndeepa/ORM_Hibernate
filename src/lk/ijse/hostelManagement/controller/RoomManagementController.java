@@ -4,7 +4,7 @@ import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.input.MouseEvent;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 
 public class RoomManagementController {
@@ -21,8 +21,7 @@ public class RoomManagementController {
     public TableColumn colKeyMoney1;
     public JFXTextField txtSearch;
 
-    public void searchOnAction(MouseEvent mouseEvent) {
-    }
+   
 
     public void addOnAction(ActionEvent actionEvent) {
     }
@@ -34,5 +33,8 @@ public class RoomManagementController {
     }
 
     public void backOnAction(ActionEvent actionEvent) {
+    }
+
+    public void searchOnAction(KeyEvent keyEvent) {
     }
 }

@@ -12,6 +12,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
+
 <AnchorPane fx:id="StudentPane" prefHeight="623.0" prefWidth="987.0" style="-fx-background-color: linear-gradient(to right, #bbd2c5, #536976);;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagement.controller.StudentManagementController">
    <children>
       <JFXTextField fx:id="txtId" layoutX="76.0" layoutY="126.0" promptText="Student ID" unFocusColor="#fcf6f6">
@@ -46,7 +47,7 @@
             <TableColumn fx:id="colGender" prefWidth="119.0" text="Gender" />
         </columns>
       </TableView>
-      <JFXTextField fx:id="txtSearch" layoutX="743.0" layoutY="46.0" onKeyPressed="#SearchOnAction" promptText="Search" unFocusColor="#fcfafa">
+      <JFXTextField fx:id="txtSearch" layoutX="743.0" layoutY="46.0" onMouseClicked="#SearchOnAction" promptText="Search" unFocusColor="#fcfafa">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
