@@ -6,6 +6,10 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.layout.AnchorPane;
+import lk.ijse.hostelManagement.util.UILoader;
+
+import java.io.IOException;
+import java.sql.SQLException;
 
 public class ManageUserController {
     public AnchorPane UserPane;
@@ -32,6 +36,7 @@ public class ManageUserController {
     public void deleteOnAction(ActionEvent actionEvent) {
     }
 
-    public void backOnAction(ActionEvent actionEvent) {
+    public void backOnAction(ActionEvent actionEvent) throws SQLException, IOException {
+        UILoader.NavigateToHome(UserPane, "AdminDashBoard");
     }
 }

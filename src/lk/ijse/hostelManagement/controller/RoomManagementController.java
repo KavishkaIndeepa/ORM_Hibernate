@@ -6,6 +6,10 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
+import lk.ijse.hostelManagement.util.UILoader;
+
+import java.io.IOException;
+import java.sql.SQLException;
 
 public class RoomManagementController {
     public AnchorPane RoomPane;
@@ -32,7 +36,8 @@ public class RoomManagementController {
     public void deleteOnAction(ActionEvent actionEvent) {
     }
 
-    public void backOnAction(ActionEvent actionEvent) {
+    public void backOnAction(ActionEvent actionEvent) throws SQLException, IOException {
+        UILoader.NavigateToHome(RoomPane, "AdminDashBoard");
     }
 
     public void searchOnAction(KeyEvent keyEvent) {

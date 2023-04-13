@@ -28,5 +28,6 @@
     <orderEntry type="library" name="required" level="project" />
     <orderEntry type="library" name="jfoenix-8.0.10" level="project" />
     <orderEntry type="library" name="mysql-connector-java-8.0.30" level="project" />
+    <orderEntry type="library" name="ecj-3.21.0" level="project" />
   </component>
 </module>

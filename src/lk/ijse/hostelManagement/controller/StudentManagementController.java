@@ -9,6 +9,10 @@ import javafx.scene.control.TableView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import lk.ijse.hostelManagement.util.UILoader;
+
+import java.io.IOException;
+import java.sql.SQLException;
 
 public class StudentManagementController {
     public AnchorPane StudentPane;
@@ -37,7 +41,8 @@ public class StudentManagementController {
     public void DeleteOnAction(ActionEvent actionEvent) {
     }
 
-    public void BackOnAction(ActionEvent actionEvent) {
+    public void BackOnAction(ActionEvent actionEvent) throws SQLException, IOException {
+        UILoader.NavigateToHome(StudentPane, "ManageReservation");
     }
 
 

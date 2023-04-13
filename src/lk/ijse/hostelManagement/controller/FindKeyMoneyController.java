@@ -5,6 +5,10 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
+import lk.ijse.hostelManagement.util.UILoader;
+
+import java.io.IOException;
+import java.sql.SQLException;
 
 public class FindKeyMoneyController {
     public AnchorPane keyMoneyPane;
@@ -20,6 +24,7 @@ public class FindKeyMoneyController {
     public void searchOnAction(KeyEvent keyEvent) {
     }
 
-    public void backOnAction(ActionEvent actionEvent) {
+    public void backOnAction(ActionEvent actionEvent) throws SQLException, IOException {
+        UILoader.NavigateToHome(keyMoneyPane, "AdminDashBoard");
     }
 }

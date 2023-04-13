@@ -1,14 +1,24 @@
 package lk.ijse.hostelManagement.controller;
 
 import javafx.animation.ScaleTransition;
+import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
+import javafx.stage.Stage;
 import javafx.util.Duration;
+import lk.ijse.hostelManagement.util.UILoader;
+
+import java.io.IOException;
+import java.sql.SQLException;
+import java.util.Objects;
 
 public class AdminDashBoardController {
     public AnchorPane adminDashBoard;
@@ -18,13 +28,44 @@ public class AdminDashBoardController {
     public Label lblMenu;
     public Label lblDescription;
 
-    public void manageUserOnAction(ActionEvent actionEvent) {
+    public void manageUserOnAction(ActionEvent actionEvent) throws SQLException, IOException {
+        UILoader.NavigateToHome(adminDashBoard, "ManageUser");
     }
 
-    public void backOnAction(ActionEvent actionEvent) {
+    public void backOnAction(ActionEvent actionEvent) throws SQLException, IOException {
+        UILoader.NavigateToHome(adminDashBoard, "login");
     }
 
-    public void navigate(MouseEvent mouseEvent) {
+    public void navigate(MouseEvent mouseEvent) throws IOException {
+        if (mouseEvent.getSource() instanceof ImageView) {
+            ImageView icon = (ImageView) mouseEvent.getSource();
+
+            Parent root = null;
+
+            switch (icon.getId()) {
+                case "imgReservation":
+                    root = FXMLLoader.load(Objects.requireNonNull(this.getClass().getResource("/lk/ijse/hostelManagement/view/ManageReservation.fxml")));
+                    break;
+                case "imgRoom":
+                    root = FXMLLoader.load(Objects.requireNonNull(this.getClass().getResource("/lk/ijse/hostelManagement/view/RoomManagement.fxml")));
+                    break;
+                case "imgKeyMoney":
+                    root = FXMLLoader.load(Objects.requireNonNull(this.getClass().getResource("/lk/ijse/hostelManagement/view/FindKeyMoney.fxml")));
+                    break;
+            }
+
+            if (root != null) {
+                Scene subScene = new Scene(root);
+                Stage primaryStage = (Stage) this.adminDashBoard.getScene().getWindow();
+                primaryStage.setScene(subScene);
+                primaryStage.centerOnScreen();
+
+                TranslateTransition tt = new TranslateTransition(Duration.millis(350), subScene.getRoot());
+                tt.setFromX(-subScene.getWidth());
+                tt.setToX(0);
+                tt.play();
+            }
+        }
     }
 
     public void playMouseEnterAnimation(MouseEvent mouseEvent) {
