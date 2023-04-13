@@ -17,7 +17,7 @@ public class AppInitializer extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        primaryStage.setScene(new Scene(FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/lk/ijse/hostelManagement/view/AdminDashBoard.fxml")))));
+        primaryStage.setScene(new Scene(FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/lk/ijse/hostelManagement/view/login.fxml")))));
         primaryStage.centerOnScreen();
        // primaryStage.initStyle(StageStyle.UNDECORATED); (close button left)
         primaryStage.show();

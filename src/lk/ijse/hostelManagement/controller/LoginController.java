@@ -7,13 +7,49 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import lk.ijse.hostelManagement.bo.BOFactory;
+import lk.ijse.hostelManagement.bo.custom.UserBO;
+import lk.ijse.hostelManagement.dto.LoginDto;
+import lk.ijse.hostelManagement.util.NotificationController;
+import lk.ijse.hostelManagement.util.UILoader;
+
+import java.io.IOException;
+import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class LoginController {
     public JFXTextField txtName;
     public JFXPasswordField txtPassword;
     public Label lblHide;
+    public AnchorPane logging_pane;
+    int attempts = 0;
 
-    public void loginOnAction(ActionEvent actionEvent) {
+    private final UserBO userBO = (UserBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.USER);
+
+    public void loginOnAction(ActionEvent actionEvent) throws SQLException, IOException, ClassNotFoundException {
+        UILoader.LoginOnAction(logging_pane, "AdminDashBoard");
+        NotificationController.LoginSuccessfulNotification("Admin");
+        ArrayList<LoginDto> loginDTOS = userBO.getAllUsers();
+        attempts++;
+        loginDTOS.forEach(e -> {
+            if (attempts <= 3) {
+                if (e.getUserID().equals(txtName.getText()) && e.getPassword().equals(txtPassword.getText())) {
+                    try {
+                        UILoader.LoginOnAction(logging_pane, "DashBoard");
+                        NotificationController.LoginSuccessfulNotification("Admin");
+                    } catch (IOException | SQLException ex) {
+                        ex.printStackTrace();
+                    }
+                } else {
+
+                }
+            } else {
+                txtName.setEditable(false);
+                txtPassword.setEditable(false);
+                NotificationController.LoginUnSuccessfulNotification("Account is Temporarily Disabled or You Did not Sign in Correctly.");
+            }
+        });
     }
 
     public void cancelOnAction(ActionEvent actionEvent) {
