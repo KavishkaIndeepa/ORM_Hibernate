@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class RoomTn {
+public class RoomTm {
     private String roomTypeId;
     private String type;
     private String keyMoney;
