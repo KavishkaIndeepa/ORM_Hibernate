@@ -67,6 +67,7 @@ public class StudentManagementController implements Initializable {
         txtAddress.clear();
         dateOfBirth.getEditor().clear();
         comGender.getSelectionModel().clearSelection();
+
         txtId.requestFocus();
         btnSave.setDisable(false);
         btnSave.setText("Save");

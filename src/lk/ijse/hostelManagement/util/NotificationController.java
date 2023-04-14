@@ -11,7 +11,7 @@ public class NotificationController {
         Notifications notificationBuilder = Notifications.create()
                 .title(option + " Successfully.!")
                 .text("Your " + option2 + " Details " + option + " is Successfully to the System.")
-                .graphic(new ImageView(new Image("/lk/ijse/hostelManagement/view/assests/Done.png")))
+                .graphic(new ImageView(new Image("/lk/ijse/hostelManagement/view/assest/Done.png")))
                 .hideAfter(Duration.seconds(8))
                 .position(Pos.BOTTOM_RIGHT);
         notificationBuilder.darkStyle();
@@ -22,7 +22,7 @@ public class NotificationController {
         Notifications notificationBuilder = Notifications.create()
                 .title(option + " UnSuccessful.!")
                 .text("Your " + option2 + " Details " + option + " is Unsuccessfully to the System.")
-                .graphic(new ImageView(new Image("/lk/ijse/hostelManagement/view/assests/Wrong.png")))
+                .graphic(new ImageView(new Image("/lk/ijse/hostelManagement/view/assest/Wrong.png")))
                 .hideAfter(Duration.seconds(8))
                 .position(Pos.BOTTOM_RIGHT);
         notificationBuilder.darkStyle();
@@ -34,7 +34,7 @@ public class NotificationController {
         Notifications notificationBuilder = Notifications.create()
                 .title(option + " Login Successful.!")
                 .text("You have Successfully Login " + option + " to the System.")
-                .graphic(new ImageView(new Image("/lk/ijse/hostelManagement/view/assests/Done.png")))
+                .graphic(new ImageView(new Image("/lk/ijse/hostelManagement/view/assest/Done.png")))
                 .hideAfter(Duration.seconds(8))
                 .position(Pos.BOTTOM_RIGHT);
         notificationBuilder.darkStyle();
@@ -45,7 +45,7 @@ public class NotificationController {
         Notifications notificationBuilder = Notifications.create()
                 .title("Login UnSuccessful.!")
                 .text(option + " Not Login, Please enter Correct User Name or Password.Try Again.!")
-                .graphic(new ImageView(new Image("/lk/ijse/hostelManagement/view/assests/Wrong.png")))
+                .graphic(new ImageView(new Image("/lk/ijse/hostelManagement/view/assest/Wrong.png")))
                 .hideAfter(Duration.seconds(8))
                 .position(Pos.BOTTOM_RIGHT);
         notificationBuilder.darkStyle();
@@ -56,7 +56,7 @@ public class NotificationController {
         Notifications notificationBuilder = Notifications.create()
                 .title(option)
                 .text(option2)
-                .graphic(new ImageView(new Image("/lk/ijse/hostelManagement/view/assests/Wrong.png")))
+                .graphic(new ImageView(new Image("/lk/ijse/hostelManagement/view/assest/Wrong.png")))
                 .hideAfter(Duration.seconds(8))
                 .position(Pos.BOTTOM_RIGHT);
         notificationBuilder.darkStyle();
@@ -67,7 +67,7 @@ public class NotificationController {
         Notifications notificationBuilder = Notifications.create()
                 .title(option)
                 .text(option2 + id)
-                .graphic(new ImageView(new Image("/lk/ijse/hostelManagement/view/assestsWrong.png")))
+                .graphic(new ImageView(new Image("/lk/ijse/hostelManagement/view/assest/Wrong.png")))
                 .hideAfter(Duration.seconds(8))
                 .position(Pos.BOTTOM_RIGHT);
         notificationBuilder.darkStyle();
