@@ -14,11 +14,11 @@ import java.time.LocalDate;
 public class ReservationDto {
     private String resId;
     private LocalDate date;
-    private String statues;
     private String studentId;
     private String roomId;
     private String keyMoney;
     private Double advance;
+    private String statues;
 
 
 }

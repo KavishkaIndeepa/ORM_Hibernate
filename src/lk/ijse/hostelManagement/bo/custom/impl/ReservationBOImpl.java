@@ -29,7 +29,7 @@ public class ReservationBOImpl implements ReservationBO {
         ArrayList<Reservation> all = reserveDAO.getAll();
         ArrayList<ReservationDto> allReserve=new ArrayList<>();
         for (Reservation r : all){
-            allReserve.add(new ReservationDto(r.getResId(),r.getDate(),r.getStatues(),r.getStudentId().getStudentId(),r.getRoomId().getRoomId(),r.getKeyMoney(),r.getAdvance()));
+            allReserve.add(new ReservationDto(r.getResId(),r.getDate(),r.getStudentId().getStudentId(),r.getRoomId().getRoomId(),r.getKeyMoney(),r.getAdvance(),r.getStatues()));
         }
         return allReserve;
     }
@@ -38,7 +38,7 @@ public class ReservationBOImpl implements ReservationBO {
     public ArrayList<ReservationDto> getAllReserveSearch(String id) throws SQLException, ClassNotFoundException {
         Reservation all = reserveDAO.search(id);
         ArrayList<ReservationDto> allSearchReserve = new ArrayList<>();
-        allSearchReserve.add(new ReservationDto(all.getResId(),all.getDate(),all.getStatues(),all.getStudentId().getStudentId(),all.getRoomId().getRoomId(),all.getKeyMoney(),all.getAdvance()));
+        allSearchReserve.add(new ReservationDto(all.getResId(),all.getDate(),all.getStudentId().getStudentId(),all.getRoomId().getRoomId(),all.getKeyMoney(),all.getAdvance(),all.getStatues()));
         return allSearchReserve;
     }
 

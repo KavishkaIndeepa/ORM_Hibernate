@@ -46,22 +46,22 @@
             <Font name="System Bold" size="15.0" />
          </font>
       </JFXTextField>
-      <JFXButton layoutX="835.0" layoutY="363.0" onAction="#addOnAction" prefHeight="31.0" prefWidth="126.0" style="-fx-background-color: #4cd137;" text="ADD" textFill="#fffafa">
+      <JFXButton fx:id="btnAddNew" layoutX="835.0" layoutY="363.0" onAction="#addOnAction" prefHeight="31.0" prefWidth="126.0" style="-fx-background-color: #4cd137;" text="ADD" textFill="#fffafa">
          <font>
             <Font name="Rockwell Bold" size="19.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="835.0" layoutY="421.0" onAction="#saveOnAction" prefHeight="31.0" prefWidth="126.0" style="-fx-background-color: #0652DD;" text="SAVE" textFill="#f2eded">
+      <JFXButton fx:id="btnSave" layoutX="835.0" layoutY="421.0" onAction="#saveOnAction" prefHeight="31.0" prefWidth="126.0" style="-fx-background-color: #0652DD;" text="SAVE" textFill="#f2eded">
          <font>
             <Font name="Rockwell Bold" size="19.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="835.0" layoutY="480.0" onAction="#deleteOnAction" prefHeight="31.0" prefWidth="126.0" style="-fx-background-color: #EA2027;" text="DELETE" textFill="#f5f0f0">
+      <JFXButton fx:id="btnDelete" layoutX="835.0" layoutY="480.0" onAction="#deleteOnAction" prefHeight="31.0" prefWidth="126.0" style="-fx-background-color: #EA2027;" text="DELETE" textFill="#f5f0f0">
          <font>
             <Font name="Rockwell Bold" size="19.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="835.0" layoutY="549.0" onAction="#backOnAction" prefHeight="31.0" prefWidth="126.0" style="-fx-background-color: #4b4b4b;" text="BACK" textFill="#f8f7f7">
+      <JFXButton fx:id="btnBack" layoutX="835.0" layoutY="549.0" onAction="#backOnAction" prefHeight="31.0" prefWidth="126.0" style="-fx-background-color: #4b4b4b;" text="BACK" textFill="#f8f7f7">
          <font>
             <Font name="Modern No. 20" size="19.0" />
          </font>

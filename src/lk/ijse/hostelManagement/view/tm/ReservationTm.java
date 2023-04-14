@@ -16,8 +16,8 @@ public class ReservationTm {
     private String resId;
     private LocalDate date;
     private String statues;
-    private Student studentId;
-    private Room roomId;
+    private String studentId;
+    private String roomId;
     private String keyMoney;
     private Double advance;
 }

@@ -10,7 +10,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane fx:id="keyMoneyPane" prefHeight="623.0" prefWidth="987.0" style="-fx-background-color: linear-gradient(to right, #bbd2c5, #536976);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagement.controller.FindKeyMoneyController">
    <children>
       <Text fill="#370fff" layoutX="322.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Remain Key Money ">
@@ -26,10 +25,10 @@
             <TableColumn fx:id="colDate" prefWidth="116.0" text="Date" />
             <TableColumn fx:id="colKeyMoney" prefWidth="138.0" text="Key Money" />
             <TableColumn fx:id="colAdvance" prefWidth="168.0" text="Advance" />
-            <TableColumn fx:id="colStatues" prefWidth="210.0" text="Sattues" />
+            <TableColumn fx:id="colStatues" prefWidth="210.0" text="Statues" />
         </columns>
       </TableView>
-      <JFXTextField layoutX="677.0" layoutY="115.0" onKeyPressed="#searchOnAction" prefHeight="31.0" prefWidth="249.0" promptText="Search">
+      <JFXTextField fx:id="txtSearch" layoutX="677.0" layoutY="115.0" onKeyPressed="#searchOnAction" prefHeight="31.0" prefWidth="249.0" promptText="Search">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>

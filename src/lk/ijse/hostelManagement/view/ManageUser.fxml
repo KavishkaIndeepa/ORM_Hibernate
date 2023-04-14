@@ -9,7 +9,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane fx:id="UserPane" prefHeight="623.0" prefWidth="987.0" style="-fx-background-color: linear-gradient(to right, #bbd2c5, #536976);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagement.controller.ManageUserController">
    <children>
       <Text fill="#370fff" layoutX="384.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manage User">
@@ -53,22 +52,22 @@
             <TableColumn fx:id="colGender" prefWidth="105.0" text="Gender" />
         </columns>
       </TableView>
-      <JFXButton layoutX="865.0" layoutY="363.0" onAction="#addOnAction" style="-fx-background-color: #4cd137;" text="ADD" textFill="#f5f3f3">
+      <JFXButton fx:id="btnAdd" layoutX="865.0" layoutY="363.0" onAction="#addOnAction" style="-fx-background-color: #4cd137;" text="ADD" textFill="#f5f3f3">
          <font>
             <Font name="Rockwell Bold" size="19.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="862.0" layoutY="418.0" onAction="#saveOnAction" style="-fx-background-color: #0652DD;" text="SAVE" textFill="#f8f4f4">
+      <JFXButton fx:id="btnSave" layoutX="862.0" layoutY="418.0" onAction="#saveOnAction" style="-fx-background-color: #0652DD;" text="SAVE" textFill="#f8f4f4">
          <font>
             <Font name="Rockwell Bold" size="19.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="848.0" layoutY="475.0" onAction="#deleteOnAction" style="-fx-background-color: #EA2027;" text="DELETE" textFill="#f8f6f6">
+      <JFXButton fx:id="btnDelete" layoutX="848.0" layoutY="475.0" onAction="#deleteOnAction" style="-fx-background-color: #EA2027;" text="DELETE" textFill="#f8f6f6">
          <font>
             <Font name="Rockwell Bold" size="19.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="864.0" layoutY="547.0" onAction="#backOnAction" style="-fx-background-color: #4b4b4b;" text="BACK" textFill="#fcfafa">
+      <JFXButton fx:id="btnBack" layoutX="864.0" layoutY="547.0" onAction="#backOnAction" style="-fx-background-color: #4b4b4b;" text="BACK" textFill="#fcfafa">
          <font>
             <Font name="Modern No. 20" size="18.0" />
          </font>

@@ -68,7 +68,7 @@ public class UserDAOImpl implements UserDAO {
     public boolean exist(String id) throws SQLException, ClassNotFoundException {
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
-        Query query = session.createQuery("SELECT userID FROM Loging WHERE userID=:id");
+        Query query = session.createQuery("SELECT userID FROM Login WHERE userID=:id");
         String id1 = (String) query.setParameter("id", id).uniqueResult();
         if (id1 != null) {
             return true;

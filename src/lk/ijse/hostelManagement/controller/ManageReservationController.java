@@ -67,9 +67,9 @@ public class ManageReservationController implements Initializable {
 
         double roomFee = Double.parseDouble(txtKeyMoney.getText());
         double advance = Double.parseDouble(txtAdvance.getText());
-        String status = String.valueOf(roomFee - advance);
+        String statues = String.valueOf(roomFee - advance);
 
-        boolean b = saveReserve(RegID,LocalDate.now(),status,cmbStudentId.getValue(),cmbRoomId.getValue(),txtKeyMoney.getText(),advance);
+        boolean b = saveReserve(RegID,LocalDate.now(),cmbStudentId.getValue(),cmbRoomId.getValue(),txtKeyMoney.getText(),advance,statues);
         if (b) {
             NotificationController.SuccessfulTableNotification("Room Reserve", "Room Reserved in student ");
         } else {
@@ -95,9 +95,9 @@ public class ManageReservationController implements Initializable {
 
     }
 
-    public boolean saveReserve(String resId, LocalDate orderDate, String status, String stId, String roomId,String keyMoney, double advance) {
+    public boolean saveReserve(String resId, LocalDate orderDate, String stId, String roomId, String keyMoney, double advance, String status) {
         try {
-            return purchaseRoomBO.PurchaseRoom(new ReservationDto(resId, orderDate, status, stId, roomId, keyMoney, advance));
+            return purchaseRoomBO.PurchaseRoom(new ReservationDto(resId, orderDate, stId, roomId, keyMoney, advance, status));
         } catch (SQLException | ClassNotFoundException throwables) {
             throwables.printStackTrace();
         }
