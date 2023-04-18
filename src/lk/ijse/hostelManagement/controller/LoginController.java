@@ -28,28 +28,7 @@ public class LoginController {
     private final UserBO userBO = (UserBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.USER);
 
     public void loginOnAction(ActionEvent actionEvent) throws SQLException, IOException, ClassNotFoundException {
-//        UILoader.LoginOnAction(logging_pane, "AdminDashBoard");
-//        NotificationController.LoginSuccessfulNotification("Admin");
-//        ArrayList<LoginDto> loginDTOS = userBO.getAllUsers();
-//        attempts++;
-//        loginDTOS.forEach(e -> {
-//            if (attempts <= 3) {
-//                if (e.getUserID().equals(txtName.getText()) && e.getPassword().equals(txtPassword.getText())) {
-//                    try {
-//                        UILoader.LoginOnAction(logging_pane, "AdminDashBoard");
-//                        NotificationController.LoginSuccessfulNotification("Admin");
-//                    } catch (IOException | SQLException ex) {
-//                        ex.printStackTrace();
-//                    }
-//                } else {
-//
-//                }
-//            } else {
-//                txtName.setEditable(false);
-//                txtPassword.setEditable(false);
-//                NotificationController.LoginUnSuccessfulNotification("Account is Temporarily Disabled or You Did not Sign in Correctly.");
-//            }
-//        });
+
         UILoader.LoginOnAction(logging_pane, "AdminDashBoard");
         NotificationController.LoginSuccessfulNotification("Admin");
         ArrayList<LoginDto> loginDTOS = userBO.getAllUsers();
