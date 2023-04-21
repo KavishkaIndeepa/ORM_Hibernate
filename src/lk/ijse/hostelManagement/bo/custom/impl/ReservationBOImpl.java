@@ -86,7 +86,9 @@ public class ReservationBOImpl implements ReservationBO {
         Reservation reservation = new Reservation(dto.getResId(),dto.getDate(),dto.getStatues(),student,room,dto.getKeyMoney(),dto.getAdvance());
         session.save(reservation);
 
-        room.setQty(room.getQty());
+//        min room
+
+        room.setQty(room.getQty()-1);
         session.update(room);
 
         transaction.commit();
