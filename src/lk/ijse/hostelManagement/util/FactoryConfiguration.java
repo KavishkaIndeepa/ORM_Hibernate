@@ -8,19 +8,35 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+import java.io.IOException;
+import java.util.Properties;
+
 public class FactoryConfiguration {
     private static FactoryConfiguration factoryConfiguration;
     private final SessionFactory sessionFactory;
 
     private FactoryConfiguration() {
 
-        Configuration config = new Configuration()
-                .addAnnotatedClass(Student.class)
-                .addAnnotatedClass(Room.class)
+        sessionFactory = new Configuration()
+                .mergeProperties(getProperties())
                 .addAnnotatedClass(Reservation.class)
-                .addAnnotatedClass(Login.class);
+                .addAnnotatedClass(Room.class)
+                .addAnnotatedClass(Login.class)
+                .addAnnotatedClass(Student.class)
+                .buildSessionFactory();
+    }
 
-        sessionFactory = config.buildSessionFactory();
+    public static Properties getProperties() {
+        Properties properties = new Properties();
+        try {
+            properties.load(ClassLoader
+                    .getSystemClassLoader()
+                    .getResourceAsStream("hibernate.properties"));
+        } catch (IOException e) {
+            System.out.println("Property file not found!");
+            e.printStackTrace();
+        }
+        return properties;
     }
 
     public static FactoryConfiguration getInstance() {
